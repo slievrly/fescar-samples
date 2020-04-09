@@ -1,6 +1,7 @@
 package io.seata.samples.sca.customer.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+
 import io.seata.rm.datasource.DataSourceProxy;
 import org.apache.commons.lang3.StringUtils;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -14,6 +15,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
 import javax.sql.DataSource;
+
 import java.io.IOException;
 
 /**
@@ -25,7 +27,6 @@ import java.io.IOException;
 @EnableConfigurationProperties({MybatisProperties.class})
 public class DataSourceConfiguration {
 
-
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource dataSource() {
@@ -33,15 +34,10 @@ public class DataSourceConfiguration {
     }
 
     @Bean
-    public DataSourceProxy dataSourceProxy(DataSource dataSource) {
-        return new DataSourceProxy(dataSource);
-    }
-
-    @Bean
-    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSourceProxy dataSourceProxy,
+    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource,
                                                        MybatisProperties mybatisProperties) {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
-        bean.setDataSource(dataSourceProxy);
+        bean.setDataSource(dataSource);
 
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {

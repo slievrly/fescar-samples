@@ -33,15 +33,10 @@ public class DataSourceConfiguration {
     }
 
     @Bean
-    public DataSourceProxy dataSourceProxy(DataSource dataSource) {
-        return new DataSourceProxy(dataSource);
-    }
-
-    @Bean
-    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSourceProxy dataSourceProxy,
+    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource,
                                                        MybatisProperties mybatisProperties) {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
-        bean.setDataSource(dataSourceProxy);
+        bean.setDataSource(dataSource);
 
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
