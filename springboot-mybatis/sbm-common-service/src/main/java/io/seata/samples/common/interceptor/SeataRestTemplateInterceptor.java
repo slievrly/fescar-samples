@@ -1,5 +1,7 @@
 package io.seata.samples.common.interceptor;
 
+import java.io.IOException;
+
 import io.seata.core.context.RootContext;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpRequest;
@@ -7,8 +9,6 @@ import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.support.HttpRequestWrapper;
-
-import java.io.IOException;
 
 public class SeataRestTemplateInterceptor implements ClientHttpRequestInterceptor {
     public SeataRestTemplateInterceptor() {

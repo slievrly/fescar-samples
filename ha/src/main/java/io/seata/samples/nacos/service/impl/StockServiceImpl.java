@@ -45,8 +45,8 @@ public class StockServiceImpl implements StockService {
     @Override
     public void deduct(String commodityCode, int count) {
         LOGGER.info("Stock Service Begin ... xid: " + RootContext.getXID());
-        LOGGER.info("Deducting inventory SQL: update stock_tbl set count = count - {} where commodity_code = {}",
-            count, commodityCode);
+        LOGGER.info("Deducting inventory SQL: update stock_tbl set count = count - {} where commodity_code = {}", count,
+            commodityCode);
 
         jdbcTemplate.update("update stock_tbl set count = count - ? where commodity_code = ?",
             new Object[] {count, commodityCode});

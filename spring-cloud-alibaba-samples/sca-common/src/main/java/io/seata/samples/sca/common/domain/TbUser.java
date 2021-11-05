@@ -1,8 +1,8 @@
 package io.seata.samples.sca.common.domain;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 @Data
 public class TbUser implements Serializable{
     /**

@@ -2,6 +2,7 @@ package io.seata.samples.shardingsphere;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+
 import com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

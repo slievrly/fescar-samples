@@ -1,7 +1,7 @@
 package io.seata.samples.order.controller;
 
-import io.seata.samples.order.service.OrderService;
 import io.seata.core.context.RootContext;
+import io.seata.samples.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

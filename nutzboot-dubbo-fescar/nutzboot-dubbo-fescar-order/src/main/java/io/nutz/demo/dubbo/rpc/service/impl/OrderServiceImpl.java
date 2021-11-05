@@ -1,15 +1,14 @@
 package io.nutz.demo.dubbo.rpc.service.impl;
 
-import org.nutz.dao.Dao;
-import org.nutz.ioc.loader.annotation.Inject;
-import org.nutz.ioc.loader.annotation.IocBean;
-
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
 
 import io.nutz.demo.bean.Order;
 import io.nutz.demo.dubbo.rpc.service.AccountService;
 import io.nutz.demo.dubbo.rpc.service.OrderService;
+import org.nutz.dao.Dao;
+import org.nutz.ioc.loader.annotation.Inject;
+import org.nutz.ioc.loader.annotation.IocBean;
 
 @IocBean
 @Service(interfaceClass=OrderService.class)

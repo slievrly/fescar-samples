@@ -6,7 +6,6 @@ import io.seata.samples.sca.provider.mapper.TbUserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 
 /**
  * Description:

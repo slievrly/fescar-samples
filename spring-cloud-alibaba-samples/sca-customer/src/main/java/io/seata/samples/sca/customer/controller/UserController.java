@@ -1,9 +1,9 @@
 package io.seata.samples.sca.customer.controller;
 
+import io.seata.core.context.RootContext;
 import io.seata.samples.sca.common.domain.TbUser;
 import io.seata.samples.sca.common.dubbo.api.UserService;
 import io.seata.samples.sca.customer.mapper.TbUserMapper;
-import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;

@@ -1,10 +1,10 @@
 package io.seata.edas.tcc.action;
 
+import java.util.List;
+
 import io.seata.rm.tcc.api.BusinessActionContext;
 import io.seata.rm.tcc.api.BusinessActionContextParameter;
 import io.seata.rm.tcc.api.TwoPhaseBusinessAction;
-
-import java.util.List;
 
 /**
  * @author zhangsen
@@ -20,8 +20,9 @@ public interface ActionTwo {
      * @param list          the list
      * @return the boolean
      */
-    @TwoPhaseBusinessAction(name = "TccActionTwo" , commitMethod = "commit", rollbackMethod = "rollback")
-    public boolean prepare(BusinessActionContext actionContext, @BusinessActionContextParameter(paramName = "b") String b,
+    @TwoPhaseBusinessAction(name = "TccActionTwo", commitMethod = "commit", rollbackMethod = "rollback")
+    public boolean prepare(BusinessActionContext actionContext,
+                           @BusinessActionContextParameter(paramName = "b") String b,
                            @BusinessActionContextParameter(paramName = "c", index = 1) List list);
 
     /**

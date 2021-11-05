@@ -7,8 +7,9 @@ package io.seata.samples.tcc.transfer.domains;
  */
 public class Account {
 
-    public Account(){
+    public Account() {
     }
+
     /**
      * 账户
      */
@@ -45,7 +46,5 @@ public class Account {
     public void setFreezedAmount(double freezedAmount) {
         this.freezedAmount = freezedAmount;
     }
-
-
 
 }

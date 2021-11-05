@@ -1,5 +1,7 @@
 package io.seata.samples.integration.account.config;
 
+import javax.sql.DataSource;
+
 import com.alibaba.druid.pool.DruidDataSource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -10,8 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-
-import javax.sql.DataSource;
 
 /**
  * @Author: lidong

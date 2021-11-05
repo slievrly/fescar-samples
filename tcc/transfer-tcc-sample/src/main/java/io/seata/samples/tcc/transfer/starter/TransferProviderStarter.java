@@ -19,11 +19,12 @@ public class TransferProviderStarter {
         mockZKServer();
 
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
-            new String[] {"spring/seata-tcc.xml", "spring/seata-dubbo-provider.xml",
-                "db-bean/to-datasource-bean.xml", "db-bean/from-datasource-bean.xml"});
+            new String[] {"spring/seata-tcc.xml", "spring/seata-dubbo-provider.xml", "db-bean/to-datasource-bean.xml",
+                "db-bean/from-datasource-bean.xml"});
 
         //初始化数据库和账号余额
-        TransferDataPrepares transferDataPrepares = (TransferDataPrepares) applicationContext.getBean("transferDataPrepares");
+        TransferDataPrepares transferDataPrepares = (TransferDataPrepares)applicationContext.getBean(
+            "transferDataPrepares");
         transferDataPrepares.init(100);
 
         new ApplicationKeeper(applicationContext).keep();

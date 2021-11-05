@@ -10,10 +10,10 @@ import io.seata.rm.tcc.api.TwoPhaseBusinessAction;
  * @author zhangsen
  */
 public interface FirstTccAction {
-	
-	/**
+
+    /**
      * 一阶段方法
-     * 
+     *
      * @param businessActionContext
      * @param accountNo
      * @param amount
@@ -25,6 +25,7 @@ public interface FirstTccAction {
 
     /**
      * 二阶段提交
+     *
      * @param businessActionContext
      * @return
      */
@@ -32,6 +33,7 @@ public interface FirstTccAction {
 
     /**
      * 二阶段回滚
+     *
      * @param businessActionContext
      * @return
      */

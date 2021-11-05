@@ -2,6 +2,11 @@ package io.nutz.demo.dubbo.rpc.service.impl;
 
 import javax.sql.DataSource;
 
+import com.alibaba.dubbo.config.annotation.Service;
+import com.alibaba.fescar.core.context.RootContext;
+
+import io.nutz.demo.bean.Stock;
+import io.nutz.demo.dubbo.rpc.service.StockService;
 import org.nutz.dao.Chain;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
@@ -9,12 +14,6 @@ import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
-
-import com.alibaba.dubbo.config.annotation.Service;
-import com.alibaba.fescar.core.context.RootContext;
-
-import io.nutz.demo.bean.Stock;
-import io.nutz.demo.dubbo.rpc.service.StockService;
 
 @IocBean
 @Service(interfaceClass= StockService.class)

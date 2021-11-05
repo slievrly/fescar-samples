@@ -1,8 +1,6 @@
 package io.seata.samples.common.filter;
 
-import io.seata.core.context.RootContext;
-import org.apache.commons.lang.StringUtils;
-import org.springframework.stereotype.Component;
+import java.io.IOException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -11,7 +9,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
+
+import io.seata.core.context.RootContext;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Component;
 
 @Component
 public class SeataFilter implements Filter {

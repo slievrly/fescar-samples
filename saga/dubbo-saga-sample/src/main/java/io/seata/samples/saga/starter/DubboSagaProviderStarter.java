@@ -38,7 +38,8 @@ public class DubboSagaProviderStarter {
         //mock zk server
         mockZKServer();
 
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(new String[] {"spring/seata-dubbo-provider.xml"});
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+            new String[] {"spring/seata-dubbo-provider.xml"});
 
         new ApplicationKeeper(applicationContext).keep();
     }

@@ -2,7 +2,11 @@ package io.seata.samples.mutiple.datasource.dao;
 
 import io.seata.samples.mutiple.datasource.common.order.Order;
 import io.seata.samples.mutiple.datasource.common.order.OrderStatus;
-import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Update;
 
 /**
  * @author HelloWoodes

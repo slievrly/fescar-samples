@@ -1,6 +1,11 @@
 package io.seata.samples.sca.provider.config;
 
+import java.io.IOException;
+
+import javax.sql.DataSource;
+
 import com.alibaba.druid.pool.DruidDataSource;
+
 import io.seata.rm.datasource.DataSourceProxy;
 import org.apache.commons.lang3.StringUtils;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -12,9 +17,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
-
-import javax.sql.DataSource;
-import java.io.IOException;
 
 /**
  * Description:

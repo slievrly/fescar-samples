@@ -1,8 +1,8 @@
 package io.seata.samples.account.persistence;
 
-import lombok.Data;
-
 import java.math.BigDecimal;
+
+import lombok.Data;
 
 @Data
 public class Account {

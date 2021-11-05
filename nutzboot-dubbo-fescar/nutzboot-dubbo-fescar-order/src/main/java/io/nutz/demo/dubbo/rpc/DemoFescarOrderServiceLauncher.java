@@ -1,11 +1,10 @@
 package io.nutz.demo.dubbo.rpc;
 
+import io.nutz.demo.bean.Order;
 import org.nutz.boot.NbApp;
 import org.nutz.dao.Dao;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
-
-import io.nutz.demo.bean.Order;
 
 @IocBean(create="init")
 public class DemoFescarOrderServiceLauncher {

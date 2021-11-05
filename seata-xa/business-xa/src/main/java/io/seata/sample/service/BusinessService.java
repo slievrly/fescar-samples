@@ -1,5 +1,9 @@
 package io.seata.sample.service;
 
+import java.util.Map;
+
+import javax.annotation.PostConstruct;
+
 import io.seata.core.context.RootContext;
 import io.seata.sample.TestDatas;
 import io.seata.sample.feign.OrderFeignClient;
@@ -10,9 +14,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
-import java.util.Map;
 
 @Service
 public class BusinessService {

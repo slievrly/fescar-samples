@@ -2,7 +2,6 @@ package io.seata.samples.integration.order.service;
 
 import java.util.UUID;
 
-
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import io.seata.samples.integration.common.dto.AccountDTO;
 import io.seata.samples.integration.common.dto.OrderDTO;

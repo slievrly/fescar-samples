@@ -17,6 +17,15 @@
 
 package io.seata.samples.shardingsphere.config;
 
+import java.sql.SQLException;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 import com.google.common.base.Preconditions;
 import io.seata.rm.datasource.DataSourceProxy;
 import lombok.RequiredArgsConstructor;
@@ -46,14 +55,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.StandardEnvironment;
 import org.springframework.jndi.JndiObjectFactoryBean;
-
-import javax.naming.NamingException;
-import javax.sql.DataSource;
-import java.sql.SQLException;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Spring boot sharding and master-slave configuration.

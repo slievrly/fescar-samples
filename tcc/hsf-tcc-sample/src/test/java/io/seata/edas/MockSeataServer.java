@@ -1,7 +1,8 @@
 package io.seata.edas;
-import io.seata.server.Server;
 
 import java.io.IOException;
+
+import io.seata.server.Server;
 
 /**
  * @author zhangsen

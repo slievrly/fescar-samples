@@ -1,12 +1,12 @@
 package io.seata.edas.tcc.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.seata.core.context.RootContext;
 import io.seata.edas.tcc.action.ActionOne;
 import io.seata.edas.tcc.action.ActionTwo;
 import io.seata.spring.annotation.GlobalTransactional;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author zhangsen
@@ -19,10 +19,10 @@ public class ActivityServiceImpl {
     private ActionTwo actionTwo;
 
     @GlobalTransactional
-    public String doActivity(boolean commit){
+    public String doActivity(boolean commit) {
         //第一个TCC 事务参与者
         boolean result = actionOne.prepare(null, 1);
-        if(!commit || !result){
+        if (!commit || !result) {
             throw new RuntimeException("TccActionOne failed.");
         }
 
@@ -31,14 +31,12 @@ public class ActivityServiceImpl {
         list.add("c1");
         list.add("c2");
         result = actionTwo.prepare(null, "two", list);
-        if(!result){
+        if (!result) {
             throw new RuntimeException("TccActionTwo failed.");
         }
 
         return RootContext.getXID();
     }
-
-
 
     public void setActionOne(ActionOne actionOne) {
         this.actionOne = actionOne;

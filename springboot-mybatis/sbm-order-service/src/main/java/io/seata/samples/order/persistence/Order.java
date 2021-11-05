@@ -1,9 +1,8 @@
 package io.seata.samples.order.persistence;
 
+import java.math.BigDecimal;
 
 import lombok.Data;
-
-import java.math.BigDecimal;
 
 @Data
 public class Order {

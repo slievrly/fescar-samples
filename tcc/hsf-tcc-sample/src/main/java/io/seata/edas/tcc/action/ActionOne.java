@@ -10,7 +10,6 @@ import io.seata.rm.tcc.api.TwoPhaseBusinessAction;
  */
 public interface ActionOne {
 
-
     /**
      * Prepare boolean.
      *
@@ -18,9 +17,8 @@ public interface ActionOne {
      * @param a             the a
      * @return the boolean
      */
-    @TwoPhaseBusinessAction(name = "TccActionOne" , commitMethod = "commit", rollbackMethod = "rollback")
-    public boolean prepare(BusinessActionContext actionContext,
-                           @BusinessActionContextParameter(paramName = "a") int a);
+    @TwoPhaseBusinessAction(name = "TccActionOne", commitMethod = "commit", rollbackMethod = "rollback")
+    public boolean prepare(BusinessActionContext actionContext, @BusinessActionContextParameter(paramName = "a") int a);
 
     /**
      * Commit boolean.
@@ -37,6 +35,5 @@ public interface ActionOne {
      * @return the boolean
      */
     public boolean rollback(BusinessActionContext actionContext);
-
 
 }

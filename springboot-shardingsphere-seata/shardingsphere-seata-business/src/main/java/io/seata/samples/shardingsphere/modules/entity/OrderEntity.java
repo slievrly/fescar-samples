@@ -17,12 +17,11 @@
 
 package io.seata.samples.shardingsphere.modules.entity;
 
+import java.io.Serializable;
 
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
-
-import java.io.Serializable;
 
 @TableName("t_order")
 public final class OrderEntity implements Serializable {

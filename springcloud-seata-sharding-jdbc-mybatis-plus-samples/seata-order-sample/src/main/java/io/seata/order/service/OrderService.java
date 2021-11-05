@@ -1,10 +1,8 @@
 package io.seata.order.service;
 
-
 import io.seata.order.client.ProductClient;
 import io.seata.order.entity.Order;
 import io.seata.order.mapper.OrderMapper;
-import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.shardingsphere.transaction.annotation.ShardingTransactionType;
 import org.apache.shardingsphere.transaction.core.TransactionType;
 import org.springframework.beans.factory.annotation.Autowired;

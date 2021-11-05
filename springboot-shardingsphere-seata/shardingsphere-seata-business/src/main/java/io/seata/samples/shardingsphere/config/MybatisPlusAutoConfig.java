@@ -1,5 +1,11 @@
 package io.seata.samples.shardingsphere.config;
 
+import java.util.Iterator;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.sql.DataSource;
+
 import com.baomidou.mybatisplus.MybatisConfiguration;
 import com.baomidou.mybatisplus.MybatisXMLLanguageDriver;
 import com.baomidou.mybatisplus.entity.GlobalConfiguration;
@@ -42,11 +48,6 @@ import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
-
-import javax.annotation.PostConstruct;
-import javax.sql.DataSource;
-import java.util.Iterator;
-import java.util.List;
 
 @Configuration
 @AutoConfigureAfter(MybatisPlusConfig.class)

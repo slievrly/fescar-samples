@@ -11,7 +11,6 @@ import io.seata.samples.tcc.action.TccActionOne;
  */
 public class TccActionOneImpl implements TccActionOne {
 
-
     @Override
     public boolean prepare(BusinessActionContext actionContext, int a) {
         String xid = actionContext.getXid();
